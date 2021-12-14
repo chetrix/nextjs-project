@@ -2,9 +2,16 @@ import Link from "next/dist/client/link";
 import classes from "./button.module.css";
 
 export default function Button(props) {
-  return (
-    <Link href={props.link}>
-      <a className={classes.btn}>{props.children}</a>
-    </Link>
-  );
+    if(props.link){
+        return (
+            <Link href={props.link}>
+              <a className={classes.btn}>{props.children}</a>
+            </Link>
+          );
+    }
+  return(
+      <button className={classes.btn} onClick={props.onClick}>
+          {props.children}
+      </button>
+  )
 }
