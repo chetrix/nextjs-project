@@ -23,19 +23,21 @@ export default function EventItem(props) {
         <div className={classes.summary}>
           <h2>{title}</h2>
           <div className={classes.date}>
-              <DateIcon/>
+            <DateIcon />
             <time>{humanReadableDate}</time>
           </div>
           <div className={classes.address}>
-              <AddressIcon/>
+            <AddressIcon />
             <address>{formattedAddress}</address>
           </div>
         </div>
         <div className={classes.actions}>
           <Button link={exploreLink}>
-              <span>Explore Event</span>
-              <span className={classes.icon}><ArrowRightIcon/></span>
-              </Button>
+            <span>Explore Event</span>
+            <span className={classes.icon}>
+              <ArrowRightIcon />
+            </span>
+          </Button>
         </div>
       </div>
     </li>
