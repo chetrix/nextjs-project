@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import EventList from "../../components/events/event-list";
 // import { getFilteredEvents } from "../../helpers/api-util";
 import useSWR from "swr";
+import Head from 'next/head';
 
 export default function FilteredEventsPage() {
   const [loadedEvents, setLoadedEvents] = useState();
@@ -62,6 +63,13 @@ export default function FilteredEventsPage() {
   }
   return (
     <div>
+      <Head>
+        <title>Filtered Events</title>
+        <meta
+          name="description"
+          content="Filtered Events"
+        />
+      </Head>
       <EventList items={filteredEvents} />
     </div>
   );
